@@ -13,9 +13,8 @@ Use this boilerplate with Authentication & User module to work on assigned tasks
 ```bash
 $ npm install
 ```
-
 ## Running the app
-
+Before running the app, docker-compose up command should executed to set up database & all other services (redis).
 ```bash
 # development
 $ npm run start
@@ -51,6 +50,9 @@ $ npm run typeorm migration:show
 
 # run migrations
 $ npm run typeorm migration:run
+
+# revert latest executed migration
+$ npm run typeorm migration:revert
 ```
 
 ## Seeds
@@ -81,6 +83,10 @@ $ nest g controller NewModule
 # Create new service
 $ nest g service NewModule
 ```
+### Source control guidelines
+
+Feature branches are used to develop new features for the upcoming future release. When starting development of a feature the branch is always created from the develop branch. The essence of a feature branch is that it exists as long as the feature is in development and is merged back into develop branch when the feature is completed.
+Example of naming: feature/email-login
 
 ## Authors
 
